@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Поиск по университетам и специальностям"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите название университета или специальности"
+        android:padding="6dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSearchResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvNoResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Результаты появятся здесь"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/btnCheckUniversities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Просмотреть университеты белоруси"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnManageUniversities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Управление университетами"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnManageStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Управление студентами"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnManageTeachers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Управление преподавателями"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnManageSpecialties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Управление специальностями"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnAssignStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назначить студентов на специальности"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnAssignTeachers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назначить преподавателей на специальности"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnMySpecialties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Мои специальности"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnMySalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Моя зарплата"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выход"
+        android:layout_marginTop="8dp"
+        android:onClick="logout"/>
+</LinearLayout>

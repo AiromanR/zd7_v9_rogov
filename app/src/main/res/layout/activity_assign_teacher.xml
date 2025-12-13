@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назначение преподавателя на специальность"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Университет" android:layout_marginBottom="8dp"/>
+    <Spinner android:id="@+id/spinnerUniversity" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Специальность" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+    <Spinner android:id="@+id/spinnerSpecialty" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Преподаватель" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+    <Spinner android:id="@+id/spinnerTeacher" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Часы в год" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+    <EditText
+        android:id="@+id/etHours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Например, 200"/>
+
+    <Button
+        android:id="@+id/btnAssign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назначить"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

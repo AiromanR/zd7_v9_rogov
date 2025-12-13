@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/main_scene"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/ministry_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ministry"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вход для Министерства"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/etMinistryLogin"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Логин"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etMinistryPassword"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnMinistryLogin"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Войти"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/teacher_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/teacher"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вход для Преподавателя"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etTeacherEmail"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etTeacherPassword"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnTeacherLogin"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Войти"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/student_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/student"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вход для Студента"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/etStudentEmail"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etStudentPassword"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/forpoles"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnStudentLogin"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Войти"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"/>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

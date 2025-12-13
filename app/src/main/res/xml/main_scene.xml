@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/ministry_state"
+        motion:constraintSetEnd="@+id/teacher_state"
+        motion:duration="300">
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchRegionId="@id/motionLayout"
+            motion:touchAnchorSide="right" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/teacher_state"
+        motion:constraintSetEnd="@+id/student_state"
+        motion:duration="300">
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchRegionId="@id/motionLayout"
+            motion:touchAnchorSide="right" />
+
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/student_state"
+        motion:constraintSetEnd="@+id/ministry_state"
+        motion:duration="300">
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchRegionId="@id/motionLayout"
+            motion:touchAnchorSide="right" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/ministry_state"
+        motion:constraintSetEnd="@+id/student_state"
+        motion:duration="300">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchRegionId="@id/motionLayout"
+            motion:touchAnchorSide="left" />
+    </Transition>
+    <!-- Обратные переходы -->
+    <Transition
+        motion:constraintSetStart="@+id/teacher_state"
+        motion:constraintSetEnd="@+id/ministry_state"
+        motion:duration="300">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchRegionId="@id/motionLayout"
+            motion:touchAnchorSide="left" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/student_state"
+        motion:constraintSetEnd="@+id/teacher_state"
+        motion:duration="300">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchRegionId="@id/motionLayout"
+            motion:touchAnchorSide="left" />
+    </Transition>
+
+    <!-- Состояния с полными констрейнтами -->
+    <ConstraintSet android:id="@+id/ministry_state">
+        <Constraint
+            android:id="@id/ministry_item"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/teacher_item"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/student_item"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/teacher_state">
+        <Constraint
+            android:id="@id/ministry_item"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/teacher_item"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/student_item"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/student_state">
+        <Constraint
+            android:id="@id/ministry_item"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/teacher_item"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/student_item"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+</MotionScene>
